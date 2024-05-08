@@ -28,8 +28,8 @@ impl Api {
         })
     }
 
-    pub fn session(&self) -> Option<Session> {
-        unsafe { Session::new(self.ort_api.as_ref(), self.ort_env.as_ref()) }
+    pub fn silero_vad(&self) -> Option<Silero> {
+        unsafe { Silero::new(self.ort_api.as_ref(), self.ort_env.as_ref()) }
     }
 }
 
