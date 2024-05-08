@@ -1,14 +1,17 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+mod onnx;
+
+pub fn get_api() {
+    let base = unsafe { onnx::OrtGetApiBase() };
+    unsafe {
+        (*base).GetApi.unwrap()(17);
+    }
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
-
     #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    fn api() {
+        get_api();
     }
 }
