@@ -1,10 +1,9 @@
 mod onnx;
 
-pub fn get_api() {
+pub fn get_api() -> *const onnx::OrtApi {
     let base = unsafe { onnx::OrtGetApiBase() };
-    unsafe {
-        (*base).GetApi.unwrap()(17);
-    }
+    let api = unsafe { (*base).GetApi.unwrap()(17) };
+    api
 }
 
 #[cfg(test)]
@@ -12,6 +11,6 @@ mod tests {
     use super::*;
     #[test]
     fn api() {
-        get_api();
+        println!("{:?}", get_api());
     }
 }

@@ -1,4 +1,7 @@
 fn main() {
+    println!("cargo:rustc-link-lib=onnxruntime");
+    println!("cargo:rustc-link-search=/home/akalashnikov/onnxruntime/lib");
+
     let builder = bindgen::builder();
     let bindings = builder
         .header("/home/akalashnikov/onnxruntime/include/onnxruntime_c_api.h")
