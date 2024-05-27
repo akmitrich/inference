@@ -1,5 +1,5 @@
-use crate::onnx;
-use std::ptr::NonNull;
+use crate::{api::session_info::SessionHandle, onnx};
+use std::{ffi::CString, ptr::NonNull};
 
 pub struct Silero<'a> {
     ort_api: &'a onnx::OrtApi,
@@ -12,7 +12,12 @@ impl<'a> Silero<'a> {
         let mut options = std::ptr::null_mut();
         unsafe {
             ort_api.CreateSessionOptions?(&mut options as _);
+            ort_api.SetSessionGraphOptimizationLevel?(
+                options as _,
+                onnx::GraphOptimizationLevel_ORT_DISABLE_ALL,
+            );
         }
+
         let mut session = std::ptr::null_mut();
         unsafe {
             ort_api.CreateSession?(
@@ -45,13 +50,7 @@ impl<'a> Drop for Silero<'a> {
 
 impl<'a> std::fmt::Debug for Silero<'a> {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        if let Some(get_model_metadata) = self.ort_api.SessionGetModelMetadata {
-            let mut metadata: *mut onnx::OrtModelMetadata = std::ptr::null_mut();
-            unsafe {
-                get_model_metadata(self.ort_session.as_ref() as _, &mut metadata as _);
-            }
-            if !metadata.is_null() {}
-        }
-        write!(f, "No metadata in the model.")
+        let info = SessionHandle::new(self.ort_api, &self.ort_session);
+        write!(f, "Info={:#?}", info.info())
     }
 }

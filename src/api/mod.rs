@@ -1,4 +1,6 @@
 mod session;
+mod session_info;
+mod element_type;
 
 pub use session::*;
 
@@ -17,7 +19,7 @@ impl Api {
         let mut env = std::ptr::null_mut();
         unsafe {
             ort_api.as_ref().CreateEnv?(
-                onnx::OrtLoggingLevel_ORT_LOGGING_LEVEL_VERBOSE,
+                onnx::OrtLoggingLevel_ORT_LOGGING_LEVEL_FATAL,
                 b"inference\0".as_ptr() as _,
                 &mut env as _,
             );

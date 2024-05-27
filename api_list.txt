@@ -1,0 +1,830 @@
+OrtApi {
+    CreateStatus: Some(
+        0x00007f9051f4ee20,
+    ),
+    GetErrorCode: Some(
+        0x00007f9051f4d940,
+    ),
+    GetErrorMessage: Some(
+        0x00007f9051f4d950,
+    ),
+    CreateEnv: Some(
+        0x00007f9051947ad0,
+    ),
+    CreateEnvWithCustomLogger: Some(
+        0x00007f9051947a10,
+    ),
+    EnableTelemetryEvents: Some(
+        0x00007f9051947d20,
+    ),
+    DisableTelemetryEvents: Some(
+        0x00007f9051947da0,
+    ),
+    CreateSession: Some(
+        0x00007f9051953490,
+    ),
+    CreateSessionFromArray: Some(
+        0x00007f9051953580,
+    ),
+    Run: Some(
+        0x00007f905194fba0,
+    ),
+    CreateSessionOptions: Some(
+        0x00007f9051984e60,
+    ),
+    SetOptimizedModelFilePath: Some(
+        0x00007f90519851c0,
+    ),
+    CloneSessionOptions: Some(
+        0x00007f905198d050,
+    ),
+    SetSessionExecutionMode: Some(
+        0x00007f9051985160,
+    ),
+    EnableProfiling: Some(
+        0x00007f9051985200,
+    ),
+    DisableProfiling: Some(
+        0x00007f9051983cb0,
+    ),
+    EnableMemPattern: Some(
+        0x00007f9051983cd0,
+    ),
+    DisableMemPattern: Some(
+        0x00007f9051983ce0,
+    ),
+    EnableCpuMemArena: Some(
+        0x00007f9051983cf0,
+    ),
+    DisableCpuMemArena: Some(
+        0x00007f9051983d00,
+    ),
+    SetSessionLogId: Some(
+        0x00007f9051985240,
+    ),
+    SetSessionLogVerbosityLevel: Some(
+        0x00007f9051983d30,
+    ),
+    SetSessionLogSeverityLevel: Some(
+        0x00007f9051983d40,
+    ),
+    SetSessionGraphOptimizationLevel: Some(
+        0x00007f9051983d50,
+    ),
+    SetIntraOpNumThreads: Some(
+        0x00007f9051983da0,
+    ),
+    SetInterOpNumThreads: Some(
+        0x00007f9051983db0,
+    ),
+    CreateCustomOpDomain: Some(
+        0x00007f9051947e20,
+    ),
+    CustomOpDomain_Add: Some(
+        0x00007f9051947f20,
+    ),
+    AddCustomOpDomain: Some(
+        0x00007f9051947fb0,
+    ),
+    RegisterCustomOpsLibrary: Some(
+        0x00007f905194ea50,
+    ),
+    SessionGetInputCount: Some(
+        0x00007f9051954bb0,
+    ),
+    SessionGetOutputCount: Some(
+        0x00007f9051954c80,
+    ),
+    SessionGetOverridableInitializerCount: Some(
+        0x00007f9051954d50,
+    ),
+    SessionGetInputTypeInfo: Some(
+        0x00007f90519552d0,
+    ),
+    SessionGetOutputTypeInfo: Some(
+        0x00007f90519551b0,
+    ),
+    SessionGetOverridableInitializerTypeInfo: Some(
+        0x00007f90519553f0,
+    ),
+    SessionGetInputName: Some(
+        0x00007f9051954e20,
+    ),
+    SessionGetOutputName: Some(
+        0x00007f9051954f50,
+    ),
+    SessionGetOverridableInitializerName: Some(
+        0x00007f9051955080,
+    ),
+    CreateRunOptions: Some(
+        0x00007f9051f77990,
+    ),
+    RunOptionsSetRunLogVerbosityLevel: Some(
+        0x00007f9051f77560,
+    ),
+    RunOptionsSetRunLogSeverityLevel: Some(
+        0x00007f9051f77570,
+    ),
+    RunOptionsSetRunTag: Some(
+        0x00007f9051f784f0,
+    ),
+    RunOptionsGetRunLogVerbosityLevel: Some(
+        0x00007f9051f77580,
+    ),
+    RunOptionsGetRunLogSeverityLevel: Some(
+        0x00007f9051f77590,
+    ),
+    RunOptionsGetRunTag: Some(
+        0x00007f9051f775a0,
+    ),
+    RunOptionsSetTerminate: Some(
+        0x00007f9051f775b0,
+    ),
+    RunOptionsUnsetTerminate: Some(
+        0x00007f9051f775c0,
+    ),
+    CreateTensorAsOrtValue: Some(
+        0x00007f905194b600,
+    ),
+    CreateTensorWithDataAsOrtValue: Some(
+        0x00007f905194bc20,
+    ),
+    IsTensor: Some(
+        0x00007f9051947920,
+    ),
+    GetTensorMutableData: Some(
+        0x00007f9051949e00,
+    ),
+    FillStringTensor: Some(
+        0x00007f9051949e80,
+    ),
+    GetStringTensorDataLength: Some(
+        0x00007f9051954350,
+    ),
+    GetStringTensorContent: Some(
+        0x00007f90519544d0,
+    ),
+    CastTypeInfoToTensorInfo: Some(
+        0x00007f9051f77420,
+    ),
+    GetOnnxTypeFromTypeInfo: Some(
+        0x00007f9051f77410,
+    ),
+    CreateTensorTypeAndShapeInfo: Some(
+        0x00007f9051f9c620,
+    ),
+    SetTensorElementType: Some(
+        0x00007f9051f9a760,
+    ),
+    SetDimensions: Some(
+        0x00007f9051f9d530,
+    ),
+    GetTensorElementType: Some(
+        0x00007f9051f9a770,
+    ),
+    GetDimensionsCount: Some(
+        0x00007f9051f9a780,
+    ),
+    GetDimensions: Some(
+        0x00007f9051f9bec0,
+    ),
+    GetSymbolicDimensions: Some(
+        0x00007f9051f9b000,
+    ),
+    GetTensorShapeElementCount: Some(
+        0x00007f9051f9de00,
+    ),
+    GetTensorTypeAndShape: Some(
+        0x00007f9051fa2eb0,
+    ),
+    GetTypeInfo: Some(
+        0x00007f9051f9c860,
+    ),
+    GetValueType: Some(
+        0x00007f9051f9eb20,
+    ),
+    CreateMemoryInfo: Some(
+        0x00007f9051f3f540,
+    ),
+    CreateCpuMemoryInfo: Some(
+        0x00007f9051a8d1d0,
+    ),
+    CompareMemoryInfo: Some(
+        0x00007f9051f3f700,
+    ),
+    MemoryInfoGetName: Some(
+        0x00007f9051f3e610,
+    ),
+    MemoryInfoGetId: Some(
+        0x00007f9051f3e620,
+    ),
+    MemoryInfoGetMemType: Some(
+        0x00007f9051f3e630,
+    ),
+    MemoryInfoGetType: Some(
+        0x00007f9051f3e640,
+    ),
+    AllocatorAlloc: Some(
+        0x00007f9051954200,
+    ),
+    AllocatorFree: Some(
+        0x00007f9051954230,
+    ),
+    AllocatorGetInfo: Some(
+        0x00007f9051954250,
+    ),
+    GetAllocatorWithDefaultOptions: Some(
+        0x00007f9051993af0,
+    ),
+    AddFreeDimensionOverride: Some(
+        0x00007f9051985280,
+    ),
+    GetValue: Some(
+        0x00007f905195bb00,
+    ),
+    GetValueCount: Some(
+        0x00007f905195b6c0,
+    ),
+    CreateValue: Some(
+        0x00007f905195d490,
+    ),
+    CreateOpaqueValue: Some(
+        0x00007f905195f510,
+    ),
+    GetOpaqueValue: Some(
+        0x00007f905195fa20,
+    ),
+    KernelInfoGetAttribute_float: Some(
+        0x00007f9051986be0,
+    ),
+    KernelInfoGetAttribute_int64: Some(
+        0x00007f9051986d90,
+    ),
+    KernelInfoGetAttribute_string: Some(
+        0x00007f9051986f40,
+    ),
+    KernelContext_GetInputCount: Some(
+        0x00007f9051984ae0,
+    ),
+    KernelContext_GetOutputCount: Some(
+        0x00007f9051984b40,
+    ),
+    KernelContext_GetInput: Some(
+        0x00007f905198dcf0,
+    ),
+    KernelContext_GetOutput: Some(
+        0x00007f905198f0b0,
+    ),
+    ReleaseEnv: Some(
+        0x00007f905195ff00,
+    ),
+    ReleaseStatus: Some(
+        0x00007f9051f4ef10,
+    ),
+    ReleaseMemoryInfo: Some(
+        0x00007f9051f3e910,
+    ),
+    ReleaseSession: Some(
+        0x00007f9051956260,
+    ),
+    ReleaseValue: Some(
+        0x00007f9051956a20,
+    ),
+    ReleaseRunOptions: Some(
+        0x00007f9051956f80,
+    ),
+    ReleaseTypeInfo: Some(
+        0x00007f9051f7a820,
+    ),
+    ReleaseTensorTypeAndShapeInfo: Some(
+        0x00007f9051f9a900,
+    ),
+    ReleaseSessionOptions: Some(
+        0x00007f905198cee0,
+    ),
+    ReleaseCustomOpDomain: Some(
+        0x00007f9051947980,
+    ),
+    GetDenotationFromTypeInfo: Some(
+        0x00007f9051f774a0,
+    ),
+    CastTypeInfoToMapTypeInfo: Some(
+        0x00007f9051f77440,
+    ),
+    CastTypeInfoToSequenceTypeInfo: Some(
+        0x00007f9051f77460,
+    ),
+    GetMapKeyType: Some(
+        0x00007f9051f77400,
+    ),
+    GetMapValueType: Some(
+        0x00007f9051f82160,
+    ),
+    GetSequenceElementType: Some(
+        0x00007f9051f82220,
+    ),
+    ReleaseMapTypeInfo: Some(
+        0x00007f9051f7a2a0,
+    ),
+    ReleaseSequenceTypeInfo: Some(
+        0x00007f9051f7a560,
+    ),
+    SessionEndProfiling: Some(
+        0x00007f9051955510,
+    ),
+    SessionGetModelMetadata: Some(
+        0x00007f90519556e0,
+    ),
+    ModelMetadataGetProducerName: Some(
+        0x00007f9051954790,
+    ),
+    ModelMetadataGetGraphName: Some(
+        0x00007f9051954860,
+    ),
+    ModelMetadataGetDomain: Some(
+        0x00007f9051954930,
+    ),
+    ModelMetadataGetDescription: Some(
+        0x00007f9051954a00,
+    ),
+    ModelMetadataLookupCustomMetadataMap: Some(
+        0x00007f9051958c00,
+    ),
+    ModelMetadataGetVersion: Some(
+        0x00007f9051954010,
+    ),
+    ReleaseModelMetadata: Some(
+        0x00007f9051956fd0,
+    ),
+    CreateEnvWithGlobalThreadPools: Some(
+        0x00007f9051947ba0,
+    ),
+    DisablePerSessionThreads: Some(
+        0x00007f9051983dc0,
+    ),
+    CreateThreadingOptions: Some(
+        0x00007f905203e750,
+    ),
+    ReleaseThreadingOptions: Some(
+        0x00007f905203e6f0,
+    ),
+    ModelMetadataGetCustomMetadataMapKeys: Some(
+        0x00007f9051955940,
+    ),
+    AddFreeDimensionOverrideByName: Some(
+        0x00007f90519853c0,
+    ),
+    GetAvailableProviders: Some(
+        0x00007f90519592d0,
+    ),
+    ReleaseAvailableProviders: Some(
+        0x00007f9051955d40,
+    ),
+    GetStringTensorElementLength: Some(
+        0x00007f9051954410,
+    ),
+    GetStringTensorElement: Some(
+        0x00007f9051954650,
+    ),
+    FillStringTensorElement: Some(
+        0x00007f90519590d0,
+    ),
+    AddSessionConfigEntry: Some(
+        0x00007f9051985930,
+    ),
+    CreateAllocator: Some(
+        0x00007f9051986240,
+    ),
+    ReleaseAllocator: Some(
+        0x00007f9051983e70,
+    ),
+    RunWithBinding: Some(
+        0x00007f905194feb0,
+    ),
+    CreateIoBinding: Some(
+        0x00007f905194add0,
+    ),
+    ReleaseIoBinding: Some(
+        0x00007f905194b090,
+    ),
+    BindInput: Some(
+        0x00007f9051953670,
+    ),
+    BindOutput: Some(
+        0x00007f9051948610,
+    ),
+    BindOutputToDevice: Some(
+        0x00007f90519492a0,
+    ),
+    GetBoundOutputNames: Some(
+        0x00007f90519487c0,
+    ),
+    GetBoundOutputValues: Some(
+        0x00007f9051948b40,
+    ),
+    ClearBoundInputs: Some(
+        0x00007f9051948200,
+    ),
+    ClearBoundOutputs: Some(
+        0x00007f90519483f0,
+    ),
+    TensorAt: Some(
+        0x00007f9051959650,
+    ),
+    CreateAndRegisterAllocator: Some(
+        0x00007f90519863b0,
+    ),
+    SetLanguageProjection: Some(
+        0x00007f9051955c50,
+    ),
+    SessionGetProfilingStartTimeNs: Some(
+        0x00007f9051954280,
+    ),
+    SetGlobalIntraOpNumThreads: Some(
+        0x00007f905203f340,
+    ),
+    SetGlobalInterOpNumThreads: Some(
+        0x00007f905203f360,
+    ),
+    SetGlobalSpinControl: Some(
+        0x00007f905203f380,
+    ),
+    AddInitializer: Some(
+        0x00007f9051985d50,
+    ),
+    CreateEnvWithCustomLoggerAndGlobalThreadPools: Some(
+        0x00007f9051947c60,
+    ),
+    SessionOptionsAppendExecutionProvider_CUDA: Some(
+        0x00007f905197d790,
+    ),
+    SessionOptionsAppendExecutionProvider_ROCM: Some(
+        0x00007f905197d9c0,
+    ),
+    SessionOptionsAppendExecutionProvider_OpenVINO: Some(
+        0x00007f905197e9d0,
+    ),
+    SetGlobalDenormalAsZero: Some(
+        0x00007f905203f3c0,
+    ),
+    CreateArenaCfg: Some(
+        0x00007f90519555d0,
+    ),
+    ReleaseArenaCfg: Some(
+        0x00007f90519542a0,
+    ),
+    ModelMetadataGetGraphDescription: Some(
+        0x00007f9051954ad0,
+    ),
+    SessionOptionsAppendExecutionProvider_TensorRT: Some(
+        0x00007f905197fe50,
+    ),
+    SetCurrentGpuDeviceId: Some(
+        0x00007f905197e1e0,
+    ),
+    GetCurrentGpuDeviceId: Some(
+        0x00007f905197e250,
+    ),
+    KernelInfoGetAttributeArray_float: Some(
+        0x00007f90519874e0,
+    ),
+    KernelInfoGetAttributeArray_int64: Some(
+        0x00007f9051987790,
+    ),
+    CreateArenaCfgV2: Some(
+        0x00007f9051957f90,
+    ),
+    AddRunConfigEntry: Some(
+        0x00007f9051f78cf0,
+    ),
+    CreatePrepackedWeightsContainer: Some(
+        0x00007f9051955630,
+    ),
+    ReleasePrepackedWeightsContainer: Some(
+        0x00007f9051956740,
+    ),
+    CreateSessionWithPrepackedWeightsContainer: Some(
+        0x00007f9051956080,
+    ),
+    CreateSessionFromArrayWithPrepackedWeightsContainer: Some(
+        0x00007f9051956170,
+    ),
+    SessionOptionsAppendExecutionProvider_TensorRT_V2: Some(
+        0x00007f905197f790,
+    ),
+    CreateTensorRTProviderOptions: Some(
+        0x00007f9051974600,
+    ),
+    UpdateTensorRTProviderOptions: Some(
+        0x00007f9051974660,
+    ),
+    GetTensorRTProviderOptionsAsString: Some(
+        0x00007f90519746c0,
+    ),
+    ReleaseTensorRTProviderOptions: Some(
+        0x00007f90519736d0,
+    ),
+    EnableOrtCustomOps: Some(
+        0x00007f90519498e0,
+    ),
+    RegisterAllocator: Some(
+        0x00007f90519864a0,
+    ),
+    UnregisterAllocator: Some(
+        0x00007f90519866d0,
+    ),
+    IsSparseTensor: Some(
+        0x00007f9051947960,
+    ),
+    CreateSparseTensorAsOrtValue: Some(
+        0x00007f905194bd00,
+    ),
+    FillSparseTensorCoo: Some(
+        0x00007f905194c0a0,
+    ),
+    FillSparseTensorCsr: Some(
+        0x00007f905194c6e0,
+    ),
+    FillSparseTensorBlockSparse: Some(
+        0x00007f905194cef0,
+    ),
+    CreateSparseTensorWithValuesAsOrtValue: Some(
+        0x00007f905194e580,
+    ),
+    UseCooIndices: Some(
+        0x00007f905194d770,
+    ),
+    UseCsrIndices: Some(
+        0x00007f905194dc40,
+    ),
+    UseBlockSparseIndices: Some(
+        0x00007f905194e0f0,
+    ),
+    GetSparseTensorFormat: Some(
+        0x00007f9051949890,
+    ),
+    GetSparseTensorValuesTypeAndShape: Some(
+        0x00007f9051f9ea50,
+    ),
+    GetSparseTensorValues: Some(
+        0x00007f9051947ec0,
+    ),
+    GetSparseTensorIndicesTypeShape: Some(
+        0x00007f9051fa3130,
+    ),
+    GetSparseTensorIndices: Some(
+        0x00007f9051fa31f0,
+    ),
+    HasValue: Some(
+        0x00007f9051947940,
+    ),
+    KernelContext_GetGPUComputeStream: Some(
+        0x00007f9051984ba0,
+    ),
+    GetTensorMemoryInfo: Some(
+        0x00007f9051959870,
+    ),
+    GetExecutionProviderApi: Some(
+        0x00007f9051955d70,
+    ),
+    SessionOptionsSetCustomCreateThreadFn: Some(
+        0x00007f9051954030,
+    ),
+    SessionOptionsSetCustomThreadCreationOptions: Some(
+        0x00007f9051954040,
+    ),
+    SessionOptionsSetCustomJoinThreadFn: Some(
+        0x00007f9051954050,
+    ),
+    SetGlobalCustomCreateThreadFn: Some(
+        0x00007f905203f3f0,
+    ),
+    SetGlobalCustomThreadCreationOptions: Some(
+        0x00007f905203f420,
+    ),
+    SetGlobalCustomJoinThreadFn: Some(
+        0x00007f905203f450,
+    ),
+    SynchronizeBoundInputs: Some(
+        0x00007f9051949020,
+    ),
+    SynchronizeBoundOutputs: Some(
+        0x00007f9051949120,
+    ),
+    SessionOptionsAppendExecutionProvider_CUDA_V2: Some(
+        0x00007f905197db90,
+    ),
+    CreateCUDAProviderOptions: Some(
+        0x00007f90519747e0,
+    ),
+    UpdateCUDAProviderOptions: Some(
+        0x00007f9051974840,
+    ),
+    GetCUDAProviderOptionsAsString: Some(
+        0x00007f90519748a0,
+    ),
+    ReleaseCUDAProviderOptions: Some(
+        0x00007f90519736e0,
+    ),
+    SessionOptionsAppendExecutionProvider_MIGraphX: Some(
+        0x00007f905197d5c0,
+    ),
+    AddExternalInitializers: Some(
+        0x00007f905198d1c0,
+    ),
+    CreateOpAttr: Some(
+        0x00007f9051975130,
+    ),
+    ReleaseOpAttr: Some(
+        0x00007f9051980450,
+    ),
+    CreateOp: Some(
+        0x00007f90519839d0,
+    ),
+    InvokeOp: Some(
+        0x00007f9051980fc0,
+    ),
+    ReleaseOp: Some(
+        0x00007f9051981080,
+    ),
+    SessionOptionsAppendExecutionProvider: Some(
+        0x00007f905197ef50,
+    ),
+    CopyKernelInfo: Some(
+        0x00007f90519744b0,
+    ),
+    ReleaseKernelInfo: Some(
+        0x00007f9051973c80,
+    ),
+    GetTrainingApi: Some(
+        0x00007f9051954060,
+    ),
+    SessionOptionsAppendExecutionProvider_CANN: Some(
+        0x00007f905197dd60,
+    ),
+    CreateCANNProviderOptions: Some(
+        0x00007f90519749c0,
+    ),
+    UpdateCANNProviderOptions: Some(
+        0x00007f9051974a20,
+    ),
+    GetCANNProviderOptionsAsString: Some(
+        0x00007f9051974a80,
+    ),
+    ReleaseCANNProviderOptions: Some(
+        0x00007f90519736f0,
+    ),
+    MemoryInfoGetDeviceType: Some(
+        0x00007f9051f3e650,
+    ),
+    UpdateEnvWithCustomLogLevel: Some(
+        0x00007f9051949b40,
+    ),
+    SetGlobalIntraOpThreadAffinity: Some(
+        0x00007f905203f480,
+    ),
+    RegisterCustomOpsLibrary_V2: Some(
+        0x00007f9051948060,
+    ),
+    RegisterCustomOpsUsingFunction: Some(
+        0x00007f905194b280,
+    ),
+    KernelInfo_GetInputCount: Some(
+        0x00007f9051984e00,
+    ),
+    KernelInfo_GetOutputCount: Some(
+        0x00007f9051984e30,
+    ),
+    KernelInfo_GetInputName: Some(
+        0x00007f9051985b30,
+    ),
+    KernelInfo_GetOutputName: Some(
+        0x00007f9051985c40,
+    ),
+    KernelInfo_GetInputTypeInfo: Some(
+        0x00007f9051987a40,
+    ),
+    KernelInfo_GetOutputTypeInfo: Some(
+        0x00007f9051987b20,
+    ),
+    KernelInfoGetAttribute_tensor: Some(
+        0x00007f9051992e20,
+    ),
+    HasSessionConfigEntry: Some(
+        0x00007f90519859c0,
+    ),
+    GetSessionConfigEntry: Some(
+        0x00007f9051988320,
+    ),
+    SessionOptionsAppendExecutionProvider_Dnnl: Some(
+        0x00007f905197df30,
+    ),
+    CreateDnnlProviderOptions: Some(
+        0x00007f9051974ae0,
+    ),
+    UpdateDnnlProviderOptions: Some(
+        0x00007f9051974b40,
+    ),
+    GetDnnlProviderOptionsAsString: Some(
+        0x00007f9051974ba0,
+    ),
+    ReleaseDnnlProviderOptions: Some(
+        0x00007f9051973700,
+    ),
+    KernelInfo_GetNodeName: Some(
+        0x00007f90519857f0,
+    ),
+    KernelInfo_GetLogger: Some(
+        0x00007f90519861f0,
+    ),
+    KernelContext_GetLogger: Some(
+        0x00007f9051983fd0,
+    ),
+    Logger_LogMessage: Some(
+        0x00007f905198be50,
+    ),
+    Logger_GetLoggingSeverityLevel: Some(
+        0x00007f9051983fe0,
+    ),
+    KernelInfoGetConstantInput_tensor: Some(
+        0x00007f9051987c00,
+    ),
+    CastTypeInfoToOptionalTypeInfo: Some(
+        0x00007f9051f77480,
+    ),
+    GetOptionalContainedTypeInfo: Some(
+        0x00007f9051f821c0,
+    ),
+    GetResizedStringTensorElementBuffer: Some(
+        0x00007f90519591d0,
+    ),
+    KernelContext_GetAllocator: Some(
+        0x00007f9051984bf0,
+    ),
+    GetBuildInfoString: Some(
+        0x00007f90519540d0,
+    ),
+    CreateROCMProviderOptions: Some(
+        0x00007f9051974c00,
+    ),
+    UpdateROCMProviderOptions: Some(
+        0x00007f9051974c60,
+    ),
+    GetROCMProviderOptionsAsString: Some(
+        0x00007f9051974cc0,
+    ),
+    ReleaseROCMProviderOptions: Some(
+        0x00007f9051973710,
+    ),
+    CreateAndRegisterAllocatorV2: Some(
+        0x00007f905198ec80,
+    ),
+    RunAsync: Some(
+        0x00007f905194a9d0,
+    ),
+    UpdateTensorRTProviderOptionsWithValue: Some(
+        0x00007f9051974720,
+    ),
+    GetTensorRTProviderOptionsByName: Some(
+        0x00007f9051974780,
+    ),
+    UpdateCUDAProviderOptionsWithValue: Some(
+        0x00007f9051974900,
+    ),
+    GetCUDAProviderOptionsByName: Some(
+        0x00007f9051974960,
+    ),
+    KernelContext_GetResource: Some(
+        0x00007f9051984d60,
+    ),
+    SetUserLoggingFunction: Some(
+        0x00007f9051983d10,
+    ),
+    ShapeInferContext_GetInputCount: Some(
+        0x00007f9051983f90,
+    ),
+    ShapeInferContext_GetInputTypeShape: Some(
+        0x00007f9051986b70,
+    ),
+    ShapeInferContext_GetAttribute: Some(
+        0x00007f9051985660,
+    ),
+    ShapeInferContext_SetOutputTypeShape: Some(
+        0x00007f905198bdb0,
+    ),
+    SetSymbolicDimensions: Some(
+        0x00007f9051f9c690,
+    ),
+    ReadOpAttr: Some(
+        0x00007f90519843f0,
+    ),
+    SetDeterministicCompute: Some(
+        0x00007f9051983dd0,
+    ),
+    KernelContext_ParallelFor: Some(
+        0x00007f90519871b0,
+    ),
+    SessionOptionsAppendExecutionProvider_OpenVINO_V2: Some(
+        0x00007f905197ebc0,
+    ),
+}
