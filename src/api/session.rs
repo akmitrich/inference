@@ -1,10 +1,12 @@
+use super::session_info::SessionInfo;
 use crate::{api::session_info::SessionHandle, onnx};
-use std::{ffi::CString, ptr::NonNull};
+use std::ptr::NonNull;
 
 pub struct Silero<'a> {
     ort_api: &'a onnx::OrtApi,
     ort_options: NonNull<onnx::OrtSessionOptions>,
     ort_session: NonNull<onnx::OrtSession>,
+    info: SessionInfo,
 }
 
 impl<'a> Silero<'a> {
@@ -27,11 +29,30 @@ impl<'a> Silero<'a> {
                 &mut session as _,
             );
         }
+        let ort_options = NonNull::new(options)?;
+        let ort_session = NonNull::new(session)?;
+        let session_handle = SessionHandle::new(ort_api, &ort_session);
         Some(Self {
             ort_api,
-            ort_options: NonNull::new(options)?,
-            ort_session: NonNull::new(session)?,
+            ort_options,
+            ort_session,
+            info: session_handle.info(),
         })
+    }
+
+    pub fn process(&self, frame: &[i16]) {
+        let data: Vec<f32> = frame
+            .iter()
+            .map(|x| (*x as f32) / (i16::MAX as f32))
+            .collect();
+        let input_names = self
+            .info
+            .input_nodes
+            .iter()
+            .map(|node| node.name.as_ptr())
+            .collect::<Vec<_>>()
+            .as_ptr();
+        println!("{:?}\n{:?}", data, input_names);
     }
 }
 
@@ -50,7 +71,6 @@ impl<'a> Drop for Silero<'a> {
 
 impl<'a> std::fmt::Debug for Silero<'a> {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let info = SessionHandle::new(self.ort_api, &self.ort_session);
-        write!(f, "Info={:#?}", info.info())
+        write!(f, "Info={:#?}", self.info)
     }
 }
