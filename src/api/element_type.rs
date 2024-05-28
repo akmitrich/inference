@@ -20,7 +20,7 @@ const TYPE_FLOAT8E4M3FNUZ: u32 = 18;
 const TYPE_FLOAT8E5M2: u32 = 19;
 const TYPE_FLOAT8E5M2FNUZ: u32 = 20;
 
-#[derive(Debug)]
+#[derive(Debug, Clone, Copy)]
 pub enum ElementType {
     Undefined,
     Float,
@@ -69,6 +69,34 @@ impl From<u32> for ElementType {
             TYPE_FLOAT8E5M2 => Self::Float8e5m2,
             TYPE_FLOAT8E5M2FNUZ => Self::Float8e5m2fnuz,
             _ => Self::Undefined,
+        }
+    }
+}
+
+impl From<ElementType> for u32 {
+    fn from(value: ElementType) -> Self {
+        match value {
+            ElementType::Undefined => 0,
+            ElementType::Float => TYPE_FLOAT,
+            ElementType::Uint8 => TYPE_UINT8,
+            ElementType::Int8 => TYPE_INT8,
+            ElementType::Uint16 => TYPE_UINT16,
+            ElementType::Int16 => TYPE_INT16,
+            ElementType::Int32 => TYPE_INT32,
+            ElementType::Int64 => TYPE_INT64,
+            ElementType::String => TYPE_STRING,
+            ElementType::Bool => TYPE_BOOL,
+            ElementType::Float16 => TYPE_FLOAT16,
+            ElementType::Double => TYPE_DOUBLE,
+            ElementType::Uint32 => TYPE_UINT32,
+            ElementType::Uint64 => TYPE_UINT64,
+            ElementType::Complex64 => TYPE_COMPLEX64,
+            ElementType::Complex128 => TYPE_COMPLEX128,
+            ElementType::Bfloat16 => TYPE_BFLOAT16,
+            ElementType::Float8e4m3fn => TYPE_FLOAT8E4M3FN,
+            ElementType::Float8e4m3fnuz => TYPE_FLOAT8E4M3FNUZ,
+            ElementType::Float8e5m2 => TYPE_FLOAT8E5M2,
+            ElementType::Float8e5m2fnuz => TYPE_FLOAT8E5M2FNUZ,
         }
     }
 }

@@ -18,7 +18,7 @@ pub struct ModelNode {
 pub struct SessionHandle<'a> {
     ort_api: &'a onnx::OrtApi,
     session: &'a NonNull<onnx::OrtSession>,
-    allocator: NonNull<onnx::OrtAllocator>,
+    pub allocator: NonNull<onnx::OrtAllocator>,
 }
 
 impl<'a> SessionHandle<'a> {
